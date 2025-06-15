@@ -3,3 +3,7 @@ pillow
 djangorestframework
 djoser
 django-cors-headers
+
+gunicorn
+whitenoise
+django-heroku

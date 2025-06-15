@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: tweet-backend
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn TwitWala.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: TwitWala.settings
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: SECRET_KEY
+        generateValue: true
+    plan: free
